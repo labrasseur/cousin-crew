@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cousin Crew Portal</title>
+  <style>
+    body {
+      background-color: #fdf6ec;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      text-align: center;
+      color: #4a3525;
+      padding-top: 60px;
+      margin: 0;
+    }
+    .card {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(184, 115, 51, 0.15);
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #d97706;
+      border-radius: 6px;
+      width: 60%;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ea580c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c2410c;
+    }
+    #content {
+      display: none;
+      margin-top: 20px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2 style="color: #9a3412; margin-top: 0;">Cousin Crew Portal</h2>
+    <p style="color: #57534e; font-size: 15px;">Enter the secret cousin crew password to unlock the portal:</p>
+    
+    <div id="login-box">
+      <input type="password" id="passwordInput" placeholder="Password...">
+      <button onclick="checkPassword()">Enter</button>
+      <p id="error-msg" style="color: #b91c1c; font-size: 14px; display: none; margin-top: 10px;">Incorrect password, try again!</p>
+    </div>
+
+    <div id="content">
+      <h3 style="color: #b45309;">Welcome to the Cousin Crew Circle!</h3>
+      <p style="color: #57534e; font-size: 14px;">You made it. Here is your reward:</p>
+<p class="reveal-text">
+        "I had nothing planned for this other than it is fun and it could just drive some of the elders crazy we have a secret password protected thing."
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      // Change "YOUR_SECRET_PASSWORD" to whatever password you want
+      var correctPassword = "taraisthebest"; 
+      var userInput = document.getElementById("passwordInput").value;
+      
+      if (userInput === correctPassword) {
+        document.getElementById("login-box").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      } else {
+        document.getElementById("error-msg").style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
